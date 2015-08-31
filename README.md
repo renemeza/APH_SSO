@@ -1,7 +1,6 @@
-# CASinoApp
+# APHSSOSystem
 
-Ready to use CAS server.
+Ready to use CAS server for APH.
 
 ## Setup
 
-Please check our [documentation](http://casino.rbcas.com/docs/) to learn how to setup CASino.

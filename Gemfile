@@ -13,10 +13,16 @@ end
 gem 'casino', '4.0.1'
 gem 'casino-ldap_authenticator', '3.0.0'
 gem 'casino-activerecord_authenticator', '4.0.1'
+gem 'casino-moped_authenticator', :git => 'https://github.com/renemeza/casino-moped_authenticator.git'
 
 gem 'http_accept_language', '~> 2.0'
 
 gem 'whenever', :require => false
+
+# For user database
+gem 'mongoid', '~> 4'
+gem 'devise', '~> 3.5.1'
+gem 'activerecord-session_store'
 
 group :sqlite do
   gem 'sqlite3'
@@ -31,6 +37,12 @@ group :postgres do
 end
 
 group :development do
-  gem 'capistrano', '~> 2.15'
+  gem 'capistrano', require: false
+  gem 'capistrano-rvm', require: false
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano3-puma', require: false
   gem 'foreman'
 end
+
+gem 'puma'

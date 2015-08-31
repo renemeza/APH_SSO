@@ -5,4 +5,4 @@
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
 
-CASinoApp::Application.config.secret_token = '82bd3084a8ca1c49d3f4d988e458dfd210716fc957a637722a80d3ca0d1571832a954b7710cbff92dfe293796b9f01af1c8b19568eb7ebeaefade27a4b596257'
+APHSSOSystem::Application.config.secret_token = 'c161202d6a7ed572659dd11371da36a4791b13349cf8b8b3d676cd6ea9d2e8dbc9939247d18a6903fffee43b36c0fc71aa6cb5bd0a687b35ae3d5b425cd265e8'

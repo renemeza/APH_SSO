@@ -1,6 +1,13 @@
-CASinoApp::Application.routes.draw do
-  mount CASino::Engine => '/', :as => 'CASino'
+APHSSOSystem::Application.routes.draw do
 
+  mount CASino::Engine => '/', :as => 'CASino'
+  devise_for :users, controller: {
+    registrations: 'users/registrations',
+    sessions: 'devise/cas_sessions'
+  }, path: '', path_names: {
+    sign_in: 'login',
+    sign_up: 'register'
+  }
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -57,4 +64,5 @@ CASinoApp::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
+  get '*path' => redirect('/')
 end

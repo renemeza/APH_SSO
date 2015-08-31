@@ -4,4 +4,8 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-CASinoApp::Application.load_tasks
+APHSSOSystem::Application.load_tasks
+
+task :server do
+  `bundle exec rails s -p 4000`
+end

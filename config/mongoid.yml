@@ -1,0 +1,6 @@
+development:
+  sessions:
+    default:
+      database: aph_sso_server
+      hosts:
+        - localhost:27017
