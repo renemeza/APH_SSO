@@ -153,7 +153,6 @@ GEM
     multi_json (1.11.2)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
-    mysql2 (0.3.20)
     net-ldap (0.11)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
@@ -264,7 +263,6 @@ DEPENDENCIES
   foreman
   http_accept_language (~> 2.0)
   mongoid (~> 4)
-  mysql2
   pg
   puma
   rails (= 4.1.8)
