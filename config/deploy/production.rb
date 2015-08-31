@@ -3,7 +3,7 @@
 # Defines a single server with a list of roles and multiple properties.
 # You can define all roles on a single server, or split them:
 
-# server 'example.com', user: 'deploy', roles: %w{app db web}, my_property: :my_value
+server 'dev.aphtech.org', user: 'deploy', roles: %w{app db web}
 # server 'example.com', user: 'deploy', roles: %w{app web}, other_property: :other_value
 # server 'db.example.com', user: 'deploy', roles: %w{db}
 
@@ -18,8 +18,8 @@
 # Don't use `:all`, it's a meta role.
 
 role :app, %w{deploy@dev.aphtech.org}
-# role :web, %w{user1@primary.com user2@additional.com}, other_property: :other_value
-# role :db,  %w{deploy@example.com}
+role :web, %w{deploy@dev.aphtech.org}
+role :db,  %w{deploy@dev.aphtech.org}
 
 
 
@@ -59,3 +59,7 @@ role :app, %w{deploy@dev.aphtech.org}
 #     auth_methods: %w(publickey password)
 #     # password: 'please use keys'
 #   }
+
+set :ssh_options, {
+  verbose: :debug
+}
