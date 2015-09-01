@@ -4,3 +4,9 @@ development:
       database: aph_sso_server
       hosts:
         - localhost:27017
+production:
+  sessions:
+    default:
+      database: aph_sso_server
+        hostd:
+          - localhost:27017
