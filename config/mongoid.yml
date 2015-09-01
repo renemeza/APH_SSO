@@ -8,5 +8,5 @@ production:
   sessions:
     default:
       database: aph_sso_server
-        hostd:
+        hosts:
           - localhost:27017
