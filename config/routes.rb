@@ -6,7 +6,7 @@ APHSSOSystem::Application.routes.draw do
     sessions: 'devise/cas_sessions'
   }, path: '', path_names: {
     sign_in: 'login',
-    sign_up: 'register'
+    sign_up: 'signup'
   }
   # The priority is based upon order of creation:
   # first created -> highest priority.
