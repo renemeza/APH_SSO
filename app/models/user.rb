@@ -4,6 +4,11 @@ class User
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable, :rememberable #, :recoverable, :rememberable, :trackable, :validatable
 
+  validates :email, presence: true
+  validates :password, presence: true, confirmation: true
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+
   ## Database authenticatable
   field :email,              type: String, default: ""
   field :encrypted_password, type: String, default: ""
